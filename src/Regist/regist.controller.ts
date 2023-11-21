@@ -33,7 +33,7 @@ export class RegistController {
   @HttpCode(HttpStatus.OK)
   async registPost(
     @Body() registData,
-    @Headers('authorization') authorization: string,
+    @Headers('Authorization') authorization: string,
   ) {
     console.log(authorization);
     return await this.registService.registPost(registData);
